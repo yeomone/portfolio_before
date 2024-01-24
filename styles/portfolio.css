@@ -1,0 +1,76 @@
+html * {font-family: Classyvogue;}
+html {scroll-behavior: smooth;}
+html, body {background-color: #f5f5f5;}
+.mouse {position: fixed; pointer-events: none; transition: 0.1s;}
+.mouse img {
+    width: 40px;
+    animation: rotate 5s infinite linear;
+}
+@keyframes rotate {
+    0% {transform: translate(-50%, -50%) rotate(0);}
+    100% {transform: translate(-50%, -50%) rotate(360deg);}
+}
+main {}
+main section {height: 100vh;}
+main .intro {}
+main .intro h1 {
+    text-align: center; font-size: 6.25rem;
+    border-bottom: 1px solid #000;
+    padding: 15px 0;
+}
+main .intro .skill_works_profile {display: flex; border-bottom: 1px solid #000;}
+main .intro .skill_works_profile .skill_works {
+    width: 70%; border-right: 1px solid #000;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 80px;
+}
+main .intro .skill_works_profile .skill_works p {
+    width: 300px; height: 300px; background-color: #ccc;
+}
+main .intro .skill_works_profile .profile {width: 30%;}
+main .intro .skill_works_profile .profile .profile_top {
+    text-align: right; border-bottom: 1px solid #000; 
+    padding: 48px 40px;
+}
+main .intro .skill_works_profile .profile .profile_top p {font-size: 2.5rem;}
+main .intro .skill_works_profile .profile .profile_btm {
+    display: flex; justify-content: right; align-items: center; 
+    padding: 30px 40px;
+}
+main .intro .skill_works_profile .profile .profile_btm a {padding-left: 30px;}
+main .intro .skill_works_profile .profile .profile_btm a:first-child {padding-left: 0;}
+main .intro .skill_works_profile .profile .profile_btm a img {width: 56px;}
+main .intro .skill_works_profile .profile .profile_btm a:nth-child(2) img {width: 76px;}
+main .intro .skills {display: flex; border-bottom: 1px solid #000;}
+main .intro .skills .skills_left {padding: 20px 50px;}
+main .intro .skills .skills_left a {font-size: 4rem; position: relative;}
+main .intro .skills .skills_left a::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    background: #000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+main .intro .skills .skills_left a:hover:after {
+    width: 100%; 
+    left: 0; 
+}
+main .intro .skills .skills_right {padding: 35px 50px; border-left: 1px solid #000;}
+main .intro .skills .skills_right li {animation: up 1s, opacity 1s;}
+@keyframes up {
+    0% {transform: translateY(100%);}
+    100% {transform: translateY(0);}
+}
+@keyframes opacity {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+main .intro .skills .skills_right li h2 {}
+main .intro .skills .skills_right li p {font-size: 5rem;}
+main .works {}
+main .works h1 {font-size: 5rem;}
